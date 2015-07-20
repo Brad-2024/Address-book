@@ -13,23 +13,20 @@ def function():
 	10 - quit"""
 	print "which one do you want to choose?"
 	choose = raw_input()
-	if choose == "1":
-		print "Please enter a filename."
-		filename = raw_input()
-		addr = open("filename","w")
-		function()
-	if choose == "2":
-		print "Please enter a name."
-		name = raw_input()
-		print "Please enter a email."
-		email = raw_input()
-		addr = open("filename","w")
-		addr.write(name)
-		addr.write("\n")
-		addr.write(email)
-		function()
-	if choose == "3":
-		function()
+
+	print "Please enter a filename."
+	filename = raw_input()
+	addr = open(filename,"a")
+	function()
+
+	print "Please enter a name."
+	name = raw_input()
+	print "Please enter a email."
+	email = raw_input()  
+	addr.write(name)
+	addr.write("\n")
+	addr.write(email)
+
 	print "do you want to quit."
 	go_out_or_no = raw_input()
 	if go_out_or_no == "yes":
