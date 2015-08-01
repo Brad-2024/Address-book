@@ -1,4 +1,4 @@
-moomoo = False
+moomoo = False            
 def function():
 	global moomoo
 	global filename
@@ -30,14 +30,22 @@ def function():
 			print "Please enter a email."
 			email = raw_input()
 			addr.write(name)
-			addr.write("\n")
+			addr.write(",")
 			addr.write(email)
+			addr.close()
 			function()
 		else:
 			print"Do number 1."
 			function()
 	elif choose == "3" or choose == "three":
+	#how do i delete an entry.
 		if moomoo:
+			print "Tell me which email do you want me to delete."
+			Email_delete = raw_input()
+			jolly = {'koy':'jooj', 'mmm':'food'}
+			print jolly
+			del jolly['koy']
+			print jolly
 			function()
 		else:
 			print"Do number 1"
@@ -51,6 +59,11 @@ def function():
 			print addr
 			addrf2_data = addr.read()
 			addrf2.write(addr)
+	elif choose == "5" or choose == "five":
+			Letters = ["f", "d", "b", "h", "r", "l", "n", "z", "j", "t", "x", "v", "p"]
+			#i do not know how to put the names in the list.
+			Letters.sort()
+			print Letters
 	elif choose == "10" or choose == "ten":
 		print "do you want to quit."
 		go_out_or_no = raw_input()
